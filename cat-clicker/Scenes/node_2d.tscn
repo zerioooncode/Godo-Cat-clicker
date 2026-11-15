@@ -1,0 +1,204 @@
+[gd_scene format=4 uid="uid://cheffeg3aibcj"]
+
+[ext_resource type="Script" uid="uid://lgs543o6t1vh" path="res://Scripts/main.gd" id="1_6whob"]
+[ext_resource type="Texture2D" uid="uid://cr75wjp0tg85a" path="res://Sprites/Bg.png" id="1_j2wod"]
+[ext_resource type="Texture2D" uid="uid://ytm04pt7108y" path="res://Sprites/Cat.png" id="2_hh5uf"]
+[ext_resource type="FontFile" uid="uid://boq5c0envxdp1" path="res://Fonts/8bitOperatorPlus-Bold (1).ttf" id="2_v1qfn"]
+[ext_resource type="Texture2D" uid="uid://brtyfn22wv6v5" path="res://Sprites/Cat_pressed.png" id="4_u7krg"]
+[ext_resource type="Texture2D" uid="uid://b65scymcqtxfr" path="res://Sprites/Fuflik.png" id="6_tx0tn"]
+[ext_resource type="AudioStream" uid="uid://csyhkfsqqji4s" path="res://Sounds/Music/Snowdin_town_music.mp3" id="7_wjtap"]
+[ext_resource type="AudioStream" uid="uid://c875gmf4yxxof" path="res://Sounds/mouse-click_2.mp3" id="8_v7gqg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hj7jg"]
+font = ExtResource("2_v1qfn")
+font_size = 132
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 0.3254902)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7krg"]
+font = ExtResource("2_v1qfn")
+font_size = 48
+shadow_size = 67
+
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_tx0tn"]
+data = PackedByteArray("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qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xBk3Y/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqg==")
+
+[node name="Node2D" type="Node2D" unique_id=1194415648]
+script = ExtResource("1_6whob")
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=519172284]
+position = Vector2(960, 540)
+scale = Vector2(9.999999, 9.999999)
+texture = ExtResource("1_j2wod")
+metadata/_edit_lock_ = true
+
+[node name="Cat_btn" type="TextureButton" parent="." unique_id=306675902]
+offset_left = 180.0
+offset_top = 504.0
+offset_right = 668.0
+offset_bottom = 992.0
+texture_normal = ExtResource("2_hh5uf")
+texture_pressed = ExtResource("4_u7krg")
+stretch_mode = 0
+
+[node name="Counter" type="Label" parent="." unique_id=1077677191]
+offset_left = -122.0
+offset_top = 365.0
+offset_right = 954.0
+offset_bottom = 632.0
+theme_override_font_sizes/font_size = 123
+text = "0$"
+label_settings = SubResource("LabelSettings_hj7jg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Shop_btn" type="Button" parent="." unique_id=1623059235]
+offset_left = 1331.0
+offset_top = 21.0
+offset_right = 1885.4579
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 87
+text = "Shop"
+
+[node name="Shop_pnl" type="Panel" parent="." unique_id=1822691951]
+visible = false
+offset_left = 836.0
+offset_top = 157.0
+offset_right = 1882.0
+offset_bottom = 895.8326
+
+[node name="Store_exit_btn" type="Button" parent="Shop_pnl" unique_id=1273521100]
+layout_mode = 0
+offset_left = 891.0
+offset_top = 12.0
+offset_right = 1031.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 94
+text = "X"
+
+[node name="Hamster_auto_btn" type="Button" parent="Shop_pnl" unique_id=1644696683]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 875.0
+offset_bottom = 182.0
+
+[node name="Hamster_lbl" type="Label" parent="Shop_pnl/Hamster_auto_btn" unique_id=1792890006]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 17.0
+offset_right = 815.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 47
+text = "Hamster: 100$
+1$/sec"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Shop_pnl/Hamster_auto_btn" unique_id=1811410744]
+position = Vector2(82, 82)
+scale = Vector2(4.28125, 4.28125)
+texture = ExtResource("6_tx0tn")
+
+[node name="Auto_upgrade_lvl_lbl" type="Label" parent="Shop_pnl/Hamster_auto_btn" unique_id=76207190]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 147.0
+offset_right = 206.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 24
+text = "Hamster lvl: 0"
+vertical_alignment = 1
+
+[node name="Quit_btn" type="Button" parent="." unique_id=1489117126]
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 120.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 39
+text = "Quit"
+
+[node name="Upgrade_btn" type="Button" parent="." unique_id=1863129581]
+offset_left = 829.0
+offset_top = 903.0
+offset_right = 1891.0
+offset_bottom = 1066.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 54
+text = "
+"
+
+[node name="Upgrade_lbl" type="Label" parent="Upgrade_btn" unique_id=774304351]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 1055.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 42
+text = "Upgrade: 15$
++1$/click"
+label_settings = SubResource("LabelSettings_u7krg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Stats_lbl" type="Label" parent="." unique_id=224058871]
+offset_left = 14.0
+offset_top = 135.0
+offset_right = 323.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 40
+text = "Stats:
+Click power: 
+Auto click power: "
+
+[node name="Achievement" type="Button" parent="." unique_id=251089568]
+offset_left = 247.0
+offset_top = -52.0
+offset_right = 458.81482
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+
+[node name="Achievement_lbl" type="Label" parent="Achievement" unique_id=1485249395]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 26.0
+offset_right = 207.66667
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("2_v1qfn")
+theme_override_font_sizes/font_size = 26
+text = "Achievement"
+vertical_alignment = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=921725220]
+autostart = true
+
+[node name="CatClickSound" type="AudioStreamPlayer" parent="." unique_id=1247586901]
+stream = SubResource("AudioStreamMP3_tx0tn")
+max_polyphony = 3
+
+[node name="SnowdinTownMusic" type="AudioStreamPlayer" parent="." unique_id=766016090]
+stream = ExtResource("7_wjtap")
+volume_db = -5.474
+autoplay = true
+
+[node name="MouseClick2" type="AudioStreamPlayer" parent="." unique_id=2147139731]
+stream = ExtResource("8_v7gqg")
+
+[connection signal="pressed" from="Cat_btn" to="." method="_on_cat_btn_pressed"]
+[connection signal="pressed" from="Shop_btn" to="." method="_on_shop_btn_pressed"]
+[connection signal="pressed" from="Shop_pnl/Store_exit_btn" to="." method="_on_store_exit_btn_pressed"]
+[connection signal="pressed" from="Shop_pnl/Hamster_auto_btn" to="." method="_on_hamster_auto_btn_pressed"]
+[connection signal="pressed" from="Quit_btn" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit_btn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Upgrade_btn" to="." method="_on_upgrade_btn_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
